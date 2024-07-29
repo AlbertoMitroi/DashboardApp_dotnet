@@ -15,62 +15,78 @@ export class SaleByMonthComponent implements OnInit {
   chart = new Chart({
     chart: {
       type: 'line',
-      height: 325
+      height: 350
     },
     title: {
-      text: 'Month wise sales'
+      text: 'Stock Market Trends Over Time'
     },
     xAxis: {
       categories: [
-        'Jan',
-        'Feb',
-        'Mar',
-        'Apr',
-        'May',
-        'Jun',
-        'Jul',
-        'Aug',
-        'Sep',
-        'Oct',
-        'Nov',
-        'Dec'
-      ]
+        'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+      ],
+      crosshair: true
     },
     yAxis: {
       title: {
-        text: 'Revenue in $'
+        text: 'Price in $'
+      },
+      labels: {
+        formatter: function() {
+          return '$' + this.value;
+        }
       }
     },
     series: [
       {
-        name: "Arizona",
+        name: "Apple (AAPL)",
         type: "line",
-        color: '#044342',
+        color: '#1f78b4',
         data: [
-          70, 69, 95, 145, 182, 215, 252, 265, 233, 183, 139, 196
+          290, 270, 210, 260, 290, 300, 270, 290, 320, 360, 380, 420
         ]
       },
       {
-        name: 'Connecticut',
+        name: 'Microsoft (MSFT)',
         type: 'line',
-        color: '#7e0505',
+        color: '#33a02c',
         data: [
-          47, 52, 44, 35, 58, 69, 32, 53, 71, 82, 99, 159
+          250, 260, 290, 260, 300, 340, 360, 400, 340, 350, 370, 370
         ]
       },
       {
-        name: 'Ohio',
+        name: 'Google (GOOGL)',
         type: 'line',
-        color: '#ed9e20',
+        color: '#e31a1c',
         data: [
-          17, 22, 14, 25, 18, 19, 22, 43, 11, 32, 29, 59
+          370, 390, 420, 390, 370, 395, 410, 420, 450, 410, 320, 290
         ]
       },
     ],
     credits: {
       enabled: false
+    },
+    tooltip: {
+      shared: true,
+      valuePrefix: '$',
+      formatter: function() {
+        let tooltip = '<b>' + this.x + '</b><br/>';
+        if (this.points) {
+          this.points.forEach(function(point) {
+            tooltip += '<span style="color:' + point.color + '">\u25CF</span> ' + point.series.name + ': <b>$' + point.y + '</b><br/>';
+          });
+        }
+        return tooltip;
+      }
+    },
+    plotOptions: {
+      series: {
+        marker: {
+          enabled: true
+        }
+      }
     }
   });
+  
 
   constructor() { }
 

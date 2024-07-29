@@ -1,64 +1,89 @@
 .transactions {
-    .transaction-wrapper {
-      overflow: auto;
-      height: 185px;
-    }
-    .title {
-      padding: 20px;
-      padding-bottom: 5px;
-      text-align: center;
-      color: #333333;
-      font-size: 18px;
-      font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica,
-        sans-serif;
-    }
-    .transaction {
-      display: flex;
-      align-items: center;
-      padding: 5px 20px;
-      border-bottom: 1px solid #f0f0f0;
-      .image {
-        width: 55px;
-        img {
-          width: 45px;
-          height: 45px;
-          object-fit: cover;
-        }
-      }
-      .title {
-        padding: 10px;
-        font-size: 16px;
-        width: 190px;
-      }
-      .price {
-        padding: 10px;
-        font-size: 16px;
-        width: 90px;
-      }
-      .shop-location {
-        padding: 10px;
-        font-size: 16px;
-        width: 190px;
-        .location {
-          margin-top: 4px;
-          font-size: 14px;
-          color: grey;
-        }
-      }
-      .status {
-        padding: 10px;
-        font-size: 15px;
-        text-transform: uppercase;
-        font-weight: bold;
-        &.confirmed {
-          color: #6920fb;
-        }
-        &.pending {
-          color: #7e0505;;
-        }
-        &.shipped {
-          color: #044342;
-        }
-      }
-    }
-  }
+  margin: 20px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.transaction-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 225px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.transaction {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  height: 60px;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.transaction .image {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.transaction .image i {
+  font-size: 40px;
+  color: #333;
+}
+
+.transaction .title {
+  font-size: 14px;
+  margin: 0; 
+  text-align: center; 
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.transaction .price {
+  font-size: 16px;
+  color: rgb(51, 16, 120);
+  font-weight: bold;
+}
+
+.transaction .shop-location {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  font-weight: bolder;
+  color: #666;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.transaction .status {
+  padding: 2px 4px;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  min-width: 60px;
+}
+.transaction .status.confirmed {
+  background-color: #28a74690;
+}
+
+.transaction .status.pending {
+  background-color: #ffc10790;
+}
+
+.transaction .status.shipped {
+  background-color: #17a3b890;
+}

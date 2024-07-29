@@ -2,14 +2,15 @@ import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import {
-  faDashboard,
-  faLocation,
-  faShop,
-  faBox,
-  faMoneyBill,
-  faChartBar,
-  faContactBook,
-  faHand,
+  faChartLine,
+  faChartPie,
+  faExchangeAlt,
+  faNewspaper,
+  faQuestionCircle,
+  faTachometerAlt,
+  faUserCog,
+  faWallet,
+
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -20,12 +21,13 @@ import {
   styleUrl: './side-nav.component.scss'
 })
 export class SideNavComponent {
-  faDashboard = faDashboard;
-  faLocation = faLocation;
-  faShop = faShop;
-  faBox = faBox;
-  faMoneyBill = faMoneyBill;
-  faChartBar = faChartBar;
-  faContactBook = faContactBook;
-  faHand = faHand;
+  faDashboard = faTachometerAlt;
+  faMarkets = faChartLine;
+  faPortofolio = faWallet;
+  faAccountSettings = faUserCog;
+  faTransactions = faExchangeAlt;
+  faStatistics = faChartPie;
+  faNewsAnalysis = faNewspaper;
+  faHelpSupport = faQuestionCircle;
+  
 }
