@@ -3,14 +3,14 @@ import { Chart } from 'angular-highcharts';
 import { ChartModule } from 'angular-highcharts';
 
 @Component({
-  selector: 'app-sale-by-month',
+  selector: 'app-chart-market-trends',
   standalone: true,
   imports: [ChartModule],
-  templateUrl: './sale-by-month.component.html',
-  styleUrl: './sale-by-month.component.scss'
+  templateUrl: './chart-market-trends.component.html',
+  styleUrl: './chart-market-trends.component.scss'
 })
 
-export class SaleByMonthComponent implements OnInit {
+export class ChartMarketTrendsComponent implements OnInit {
 
   chart = new Chart({
     chart: {

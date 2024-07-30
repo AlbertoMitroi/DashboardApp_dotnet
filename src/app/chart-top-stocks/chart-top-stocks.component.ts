@@ -3,13 +3,13 @@ import { Chart } from 'angular-highcharts';
 import { ChartModule } from 'angular-highcharts';
 
 @Component({
-  selector: 'app-sale-by-category',
+  selector: 'app-chart-top-stocks',
   standalone: true,
   imports: [ChartModule],
-  templateUrl: './sale-by-category.component.html',
-  styleUrl: './sale-by-category.component.scss'
+  templateUrl: './chart-top-stocks.component.html',
+  styleUrl: './chart-top-stocks.component.scss'
 })
-export class SaleByCategoryComponent {
+export class ChartTopStocksComponent {
 
   chart = new Chart({
     chart: {

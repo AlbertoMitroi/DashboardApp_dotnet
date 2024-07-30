@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SaleByMonthComponent } from './sale-by-month.component';
+import { StockNewsComponent } from './stock-news.component';
 
-describe('SaleByMonthComponent', () => {
-  let component: SaleByMonthComponent;
-  let fixture: ComponentFixture<SaleByMonthComponent>;
+describe('StockNewsComponent', () => {
+  let component: StockNewsComponent;
+  let fixture: ComponentFixture<StockNewsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SaleByMonthComponent]
+      imports: [StockNewsComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SaleByMonthComponent);
+    fixture = TestBed.createComponent(StockNewsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SaleByCategoryComponent } from './sale-by-category.component';
+import { ChartTopStocksComponent } from './chart-top-stocks.component';
 
-describe('SaleByCategoryComponent', () => {
-  let component: SaleByCategoryComponent;
-  let fixture: ComponentFixture<SaleByCategoryComponent>;
+describe('ChartTopStocksComponent', () => {
+  let component: ChartTopStocksComponent;
+  let fixture: ComponentFixture<ChartTopStocksComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SaleByCategoryComponent]
+      imports: [ChartTopStocksComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SaleByCategoryComponent);
+    fixture = TestBed.createComponent(ChartTopStocksComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

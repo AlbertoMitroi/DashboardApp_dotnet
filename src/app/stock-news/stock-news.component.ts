@@ -3,13 +3,13 @@ import { Chart } from 'angular-highcharts';
 import { ChartModule } from 'angular-highcharts';
 
 @Component({
-  selector: 'app-top-three-products',
+  selector: 'app-stock-news',
   standalone: true,
   imports: [ChartModule],
-  templateUrl: './top-three-products.component.html',
-  styleUrl: './top-three-products.component.scss'
+  templateUrl: './stock-news.component.html',
+  styleUrl: './stock-news.component.scss'
 })
-export class TopThreeProductsComponent {
+export class StockNewsComponent {
 
 
 }
